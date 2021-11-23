@@ -1,21 +1,50 @@
 require('@nomiclabs/hardhat-waffle')
+require('hardhat-deploy')
+require('hardhat-deploy-ethers')
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners()
-
-  for (const account of accounts) {
-    console.log(account.address)
-  }
-})
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
+const accounts = {
+  mnemonic: `${process.env.MNEMONIC}`,
+}
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
+  paths: {
+    artifacts: 'artifacts',
+    cache: 'cache',
+    deploy: 'deploy',
+    deployments: 'deployments',
+    imports: 'imports',
+    sources: 'contracts',
+    tests: 'test',
+  },
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+  },
+  networks: {
+    ropsten: {
+      url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts,
+      chainId: 3,
+      live: true,
+      saveDeployments: true,
+      tags: ['staging'],
+      gasPrice: 8000000000,
+    },
+    mainnet: {
+      url: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts,
+      chainId: 1,
+      live: true,
+      saveDeployments: true,
+      tags: ['production'],
+      gasMultiplier: 1.5,
+      gasPrice: 39000000000,
+      timeout: 60000,
+    },
+  },
   solidity: '0.8.10',
 }
