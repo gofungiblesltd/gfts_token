@@ -25,6 +25,22 @@ module.exports = {
     },
   },
   networks: {
+    matic: {
+      url: 'https://rpc-mainnet.maticvigil.com',
+      accounts,
+      chainId: 137,
+      live: true,
+      saveDeployments: true,
+      gasPrice: 1000000000,
+    },
+    mumbai: {
+      url: 'https://rpc-mumbai.maticvigil.com/',
+      accounts,
+      chainId: 80001,
+      live: true,
+      saveDeployments: true,
+      tags: ['staging'],
+    },
     ropsten: {
       url: `https://ropsten.infura.io/v3/${process.env.INFURA_API_KEY}`,
       accounts,

@@ -7,7 +7,7 @@ module.exports = async function ({
   const { deploy } = deployments
   const { deployer } = await getNamedAccounts()
 
-  const initialSupply = '1000'
+  const initialSupply = '1000000000000000000000'
 
   await deploy('GFTSToken', {
     from: deployer,

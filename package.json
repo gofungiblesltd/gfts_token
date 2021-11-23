@@ -5,8 +5,10 @@
   "scripts": {
     "test": "hardhat test",
     "deploy:ropsten": "hardhat deploy --network ropsten",
+    "deploy:mumbai": "hardhat deploy --network mumbai",
     "deploy:mainnet": "hardhat deploy --network mainnet",
     "verify:ropsten": "hardhat etherscan-verify --network ropsten",
+    "verify:mumbai": "hardhat etherscan-verify --network mumbai --api-key $ETHERSCAN_API_KEY",
     "verify:mainnet": "hardhat etherscan-verify --network mainnet --api-key $ETHERSCAN_API_KEY"
   },
   "license": "MIT",
