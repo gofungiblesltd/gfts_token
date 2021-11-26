@@ -61,6 +61,9 @@ module.exports = {
       gasPrice: 39000000000,
       timeout: 60000,
     },
+    hardhat: {
+      chainId: 137
+    },
   },
   solidity: '0.8.10',
 }
