@@ -9,7 +9,9 @@
     "deploy:mainnet": "hardhat deploy --network mainnet",
     "verify:ropsten": "hardhat etherscan-verify --network ropsten",
     "verify:mumbai": "hardhat etherscan-verify --network mumbai --api-key $ETHERSCAN_API_KEY",
-    "verify:mainnet": "hardhat etherscan-verify --network mainnet --api-key $ETHERSCAN_API_KEY"
+    "verify:mainnet": "hardhat etherscan-verify --network mainnet --api-key $ETHERSCAN_API_KEY",
+    "prettier": "prettier -c 'contracts/**/*.sol' 'test/*.js'",
+    "prettier:fix": "prettier --write 'contracts/**/*.sol' 'test/*.js'"
   },
   "license": "MIT",
   "devDependencies": {
@@ -20,7 +22,9 @@
     "ethers": "^5.0.0",
     "hardhat": "2.6.8",
     "hardhat-deploy": "0.9.10",
-    "hardhat-deploy-ethers": "0.3.0-beta.11"
+    "hardhat-deploy-ethers": "0.3.0-beta.11",
+    "prettier": "^2.5.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.19"
   },
   "dependencies": {
     "@openzeppelin/contracts": "4.3.3"
