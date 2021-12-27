@@ -31,7 +31,7 @@ module.exports = {
       chainId: 137,
       live: true,
       saveDeployments: true,
-      gasPrice: 1000000000,
+      gasPrice: 30000000000,
     },
     mumbai: {
       url: 'https://rpc-mumbai.maticvigil.com/',

@@ -5,6 +5,8 @@
 
 Fungible ERC-20 token for GoFungibles NFT marketplace
 
+Address: [0xCa0D640a401406f3405b4C252a5d0c4d17F38EBb](https://polygonscan.com/token/0xCa0D640a401406f3405b4C252a5d0c4d17F38EBb)
+
 
 ## Token specification
 
