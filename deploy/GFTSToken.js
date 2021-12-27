@@ -12,7 +12,7 @@ module.exports = async function ({
   await deploy('GFTSToken', {
     from: deployer,
     log: true,
-    args: [initialSupply],
+    args: [],
     skipIfAlreadyDeployed: true,
   })
 }
